@@ -9,8 +9,12 @@ public class _01_SortedArrayChecker {
      * and false otherwise.
      */
     public static boolean intArraySorted(int[] arr) {
-        
-        return false;
+    	for (int k = 0; k < arr.length; k++) {
+    		 if( arr[k] < arr[ k+1 ] ) {
+    			 return true;
+    		 }
+    	}
+       return false;
     }
 
     /*
@@ -20,7 +24,14 @@ public class _01_SortedArrayChecker {
      * The method returns true if the double array is in ascending order
      * and false otherwise.
      */
-
+    public static boolean doubleArraySorted(double[] arr) {
+    	for (int k = 0; k < arr.length; k++) {
+    		 if( arr[k] < arr[ k+1 ] ) {
+    			 return true;
+    		 }
+    	}
+       return false;
+    }
 
     /*
      * 3. Write a static method called charArraySorted.
@@ -30,7 +41,10 @@ public class _01_SortedArrayChecker {
      * order and false otherwise (You can compare characters just like
      * integers).
      */
-
+    public static boolean charArraySorted(char[] arr) {
+		
+    	return false;
+    }
 
     /*
      * 4. Write a static method called stringArraySorted.
