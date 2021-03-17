@@ -9,12 +9,12 @@ public class _01_SortedArrayChecker {
      * and false otherwise.
      */
     public static boolean intArraySorted(int[] arr) {
-    	for (int k = 0; k < arr.length; k++) {
-    		 if( arr[k] < arr[ k+1 ] ) {
-    			 return true;
+    	for (int i = 0; i < arr.length - 1; i++) {
+    		 if( arr[i] > arr[ i+1 ] ) {
+    			 return false;
     		 }
     	}
-       return false;
+       return true;
     }
 
     /*
@@ -25,12 +25,12 @@ public class _01_SortedArrayChecker {
      * and false otherwise.
      */
     public static boolean doubleArraySorted(double[] arr) {
-    	for (int k = 0; k < arr.length; k++) {
-    		 if( arr[k] < arr[ k+1 ] ) {
-    			 return true;
+    	for (int k = 0; k < arr.length - 1; k++) {
+    		 if( arr[k] > arr[ k+1 ] ) {
+    			 return false;
     		 }
     	}
-       return false;
+       return true;
     }
 
     /*
@@ -42,8 +42,12 @@ public class _01_SortedArrayChecker {
      * integers).
      */
     public static boolean charArraySorted(char[] arr) {
-		
-    	return false;
+    	for (int k = 0; k < arr.length - 1; k++) {
+            if( arr[k] > (arr[ k+1 ]) ) {
+            	return false;
+            }
+        }
+    	return true;
     }
 
     /*
@@ -53,5 +57,12 @@ public class _01_SortedArrayChecker {
      *  The method returns true if the String array is in alphabetical
      *  order and false otherwise (Use the compareTo(String) method).
      */
-
+    public static boolean stringArraySorted(String[] arr) {
+    	for (int k = 0; k < arr.length - 1; k++) {
+            if( arr[k].compareTo(arr[ k+1 ]) > 0 ) {
+            	return false;
+            }
+        }
+    	return true;
+    }
 }
